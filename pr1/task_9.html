@@ -23,26 +23,19 @@
     }
 
     function formatTime(minutes) {
-      if (minutes > 1440) {
-        minutes %= 1440;
-      }
 
-      let hours = parseInt((minutes / 60))
-
-      if (hours == 24) hours = 0;
+      const hours = parseInt((minutes / 60)) % 24;
 
       let minutesLeft = minutes % 60;
 
       const formattedHours = hours.toString().padStart(2, "0");
       const formattedMinutes = minutesLeft.toString().padStart(2, "0");
 
-      // hours < 10 ? formattedHours = "0" + hours : formattedHours = hours;
-      // minute < 10 ? formattedMinutes = "0" + minute : formattedMinutes = minute;
-
       return `${formattedHours}:${formattedMinutes}`
     }
 
-    // let n = 600;
+    // let n = 1450;
+
     let n = parseInt(prompt("Введіть скільки хвилин пройшло з початку доби "));
 
     addTextInPage(`now: ${formatTime(n)}`);

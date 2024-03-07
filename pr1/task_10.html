@@ -25,7 +25,7 @@
 
     function formatTime(seconds) {
       // const hours = Math.floor(seconds / 3600) % 24; // якщо годиник не сумує години
-      const hours = Math.floor(seconds / 3600); // якщо годиник сумує години
+      const hours = Math.floor(seconds / 3600); // якщо годиник сумує години (>23годин може виходити)
       const minutes = Math.floor((seconds % 3600) / 60);
       const secondsLeft = seconds % 60;
 
@@ -36,7 +36,7 @@
     }
 
 
-    // let n = 600;
+    // let n = 100000;
     let n = parseInt(prompt("Введіть скільки секунд пройшло з початку доби "));
 
 
