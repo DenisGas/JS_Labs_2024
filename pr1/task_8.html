@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 8 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 8</h1>
+  <h2>Дано тризначне число. Знайти суму і добуток його цифр.</h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    // let threeDigitNum = 326;
+
+    let threeDigitNum = parseInt(prompt("Введіть тризначне число"));
+
+    const arrayOfDigits = Array.from(String(threeDigitNum), Number);
+
+    let sum = 0;
+
+    arrayOfDigits.forEach((num) => sum += num)
+
+    addTextInPage(`сума цифр тризначного числа ${threeDigitNum} = ${sum}`);
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+</html>

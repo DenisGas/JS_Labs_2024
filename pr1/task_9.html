@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 9 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 9</h1>
+  <h2>Дано число n. З початку доби пройшло n хвилин. Визначте, скільки годин і хвилин показуватимуть електронний
+    годинник в
+    цей момент. Програма повинна вивести два числа: кількість годин (від 0 до 23) і кількість хвилин (від 0 до 59).
+    Врахуйте, що число n може бути більше, ніж кількість хвилин в добі.</h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    function formatTime(minutes) {
+      if (minutes > 1440) {
+        minutes %= 1440;
+      }
+
+      let hours = parseInt((minutes / 60))
+
+      if (hours == 24) hours = 0;
+
+      let minutesLeft = minutes % 60;
+
+      const formattedHours = hours.toString().padStart(2, "0");
+      const formattedMinutes = minutesLeft.toString().padStart(2, "0");
+
+      // hours < 10 ? formattedHours = "0" + hours : formattedHours = hours;
+      // minute < 10 ? formattedMinutes = "0" + minute : formattedMinutes = minute;
+
+      return `${formattedHours}:${formattedMinutes}`
+    }
+
+    // let n = 600;
+    let n = parseInt(prompt("Введіть скільки хвилин пройшло з початку доби "));
+
+    addTextInPage(`now: ${formatTime(n)}`);
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+
+</html>

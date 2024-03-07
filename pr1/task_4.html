@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 4 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 4</h1>
+  <h2>Дано ціле число. Вивести повідомлення </h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+
+    // let number = parseInt(prompt("Введіть ціле число "));
+    // let number = Math.round(Math.random() * 100);
+
+    let number = 40;
+
+    addTextInPage(`The next number for the number ${number} is ${number + 1}`);
+    addTextInPage(`The previous number for the number ${number} is ${number - 1}`);
+
+
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+</html>

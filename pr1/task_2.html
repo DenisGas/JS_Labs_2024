@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 2 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 2</h1>
+  <h2>Дано три числа a, b, c. Знайти суму, добуток і середнє арифметичне введених чисел.</h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    function getSum(a, b, c) {
+      return a + b + c
+    }
+
+    function getProduct(a, b, c) {
+      return a * b * c
+    }
+
+    function getAvg(a, b, c) {
+      return (a + b + c) / 3
+    }
+
+    // function getAvg(...numbers) {
+    //   let sum = 0;
+    //   numbers.forEach((num) => sum += num)
+    //   return sum / numbers.length
+    // }
+
+
+    // let a = parseFloat(prompt("Введіть значення числа a"));
+    // let b = parseFloat(prompt("Введіть значення числа b"));
+    // let b = parseFloat(prompt("Введіть значення числа с"));
+
+    // let a = Math.round(Math.random() * 10);
+    // let b = Math.round(Math.random() * 10);
+    // let c = Math.round(Math.random() * 10);
+
+    let a = 4;
+    let b = 5;
+    let c = 7;
+
+    let sum = getSum(a, b, c);
+    let product = getProduct(a, b, c);
+    let avg = getAvg(a, b, c);
+
+    addTextInPage(`${a} + ${b} + ${c} = ${sum}`);
+    addTextInPage(`${a} * ${b} * ${c} = ${product}`);
+    addTextInPage(`(${a} + ${b} + ${c}) / 3 = ${avg}`);
+
+  </script>
+
+
+  <script src="./routing.js"></script>
+</body>
+
+</html>

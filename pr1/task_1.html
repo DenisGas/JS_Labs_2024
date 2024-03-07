@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 1 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 1</h1>
+  <h2>Розрахунок площі та периметра прямокутника</h2>
+
+  <script>
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    function calcRectangleArea(a, b) {
+      return a * b
+    }
+
+    function calcRectanglePerimeter(a, b) {
+      return 2 * (a + b)
+    }
+
+    // let a = Math.round(Math.random() * 10);
+    // let b = Math.round(Math.random() * 10);
+
+    let a = parseFloat(prompt("Введіть значення сторони прямокутника a"));
+    let b = parseFloat(prompt("Введіть значення сторони прямокутника b"));
+
+
+    let s = calcRectangleArea(a, b);
+    let p = calcRectanglePerimeter(a, b);
+
+    alert("Площа прямокутника=" + s + "\nПериметр прямокутника=" + p);
+
+    addTextInPage("a=" + a)
+    addTextInPage("b=" + b)
+    addTextInPage("S=" + s)
+    addTextInPage("P=" + p)
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+</html>

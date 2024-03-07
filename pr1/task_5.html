@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 5 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 5</h1>
+  <h2>Поміняти місцями вміст змінних A і B і вивести нові значення A і B.</h2>
+
+  <script>
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    // let a = prompt("Введіть  змінну 1");
+    // let b = prompt("Введіть  змінну 2");
+
+    let a = 40;
+    let b = "js";
+
+    addTextInPage(`a = ${a}, b = ${b}`);
+
+    let temp = a;
+    a = b
+    b = temp;
+
+    addTextInPage(`Після того як змінні поміняли 
+    <br>
+    a = ${a}, b = ${b}`);
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+</html>

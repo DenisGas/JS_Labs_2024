@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 10 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 10</h1>
+  <h2>Дано число n. З початку доби пройшло n секунд. Виведіть, що покаже електронний годинник, який повинен показувати
+    час в
+    форматі h: mm: ss, тобто спочатку записується кількість годин, потім обов'язково двозначну кількість хвилин, потім
+    обов'язково двозначну кількість секунд. Кількість хвилин і секунд при необхідності доповнюються до двозначного числа
+    нулями. Примітка: Не використовувати операції розгалуження!!!</h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    function formatTime(seconds) {
+      // const hours = Math.floor(seconds / 3600) % 24; // якщо годиник не сумує години
+      const hours = Math.floor(seconds / 3600); // якщо годиник сумує години
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secondsLeft = seconds % 60;
+
+      const formattedMinutes = minutes.toString().padStart(2, "0");
+      const formattedSeconds = secondsLeft.toString().padStart(2, "0");
+
+      return `${hours}:${formattedMinutes}:${formattedSeconds}`;
+    }
+
+
+    // let n = 600;
+    let n = parseInt(prompt("Введіть скільки секунд пройшло з початку доби "));
+
+
+    addTextInPage(`${formatTime(n)}`);
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+
+</html>

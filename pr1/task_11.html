@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 11 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 11</h1>
+  <h2>Дано число, що позначає рік. Перевірити істинність висловлювання: «рік високосний» (тобто видати true або false).
+  </h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    function isLeapYear(year) {
+      return (year % 400 === 0 || year % 4 === 0 && year % 100 !== 0);
+    }
+
+    // let year = 2024;
+
+    let year = parseInt(prompt("Введіть рік "));
+
+
+    addTextInPage(`${isLeapYear(year)}`);
+
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+
+</html>

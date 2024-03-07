@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Практична робота 1. Завдання 6 </title>
+
+</head>
+
+<body>
+  <h1>Завдання 6</h1>
+  <h2>Дано змінні A, B, C. Змінити їх значення, перемістивши вміст A в B, B – в C, C – в A, і вивести нові значення
+    змінних A, B, C.</h2>
+
+  <script>
+
+    function addTextInPage(text) {
+      document.write("<p>" + text + "</p>")
+    }
+
+    // let a = prompt("Введіть  змінну 1");
+    // let b = prompt("Введіть  змінну 2");
+    // let c = prompt("Введіть  змінну 2");
+
+    let a = 5;
+    let b = "sss"
+    let c = 200;
+
+    addTextInPage(`a = ${a}, b = ${b} c = ${c}`);
+
+    let tempC = c;
+    c = b;
+    b = a;
+    a = tempC;
+
+    //b = a, c = b, a = c
+
+    addTextInPage(`Після того як змінні поміняли 
+    <br>
+    a = ${a}, b = ${b} c = ${c}`);
+  </script>
+
+  <script src="./routing.js"></script>
+</body>
+
+
+</html>
