@@ -1,4 +1,3 @@
-
 function addTaskLink(taskNum, text = taskNum) {
   document.write("<a href=task_" + taskNum + ".html" + " >" + "Завдання " + + text + "</a>")
 }
@@ -21,5 +20,3 @@ if (taskNumber === 11) {
 addTaskLink(previousTask)
 
 addTaskLink(nextTask)
-
-
